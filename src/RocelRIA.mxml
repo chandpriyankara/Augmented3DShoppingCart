@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" horizontalAlign="center" verticalAlign="top" cornerRadius="2" alpha="1" borderStyle="none" xmlns:services="services.*">
+	<mx:Script>
+		<![CDATA[	
+			
+			private var showroomId:int = 2;
+			protected function sendToClient():void
+			{
+				result_text.text = "waiting to load data...."
+				sendToClientResult.token = complexRIADTO.sendToClient(showroomId);
+			}
+			protected function sendToServer(complexRIA:ComplexRIA):void
+			{
+				result_text.text="Communicating with server.....";
+				complexRIA.showRoomId = showroomId;
+				sendToServerResult.token = complexRIADTO.sendToServer(complexRIA);
+			}
+		]]>
+	</mx:Script>
+	
+	<mx:Script source="com/fortunaglobal/rocel/ModelLoader.as"/>
+	<mx:Canvas id="tCanvas" borderColor="#FF0909" alpha="1" creationComplete="onInit(event);" width="917" x="0" height="561" y="0">
+	</mx:Canvas>
+	<mx:Button id="SaveButon" x="4" y="108" label="Save" width="79" click="saveLoadedModels();"/>
+	<mx:Button id="loadButon" x="4" y="137" label="Load" width="79" click="reLoad()"/>
+	<mx:TextArea id="result_text" x="10" y="166" width="200" height="27"/>
+	<mx:Panel y="10" width="124" height="255" layout="absolute" title="Tiles" horizontalAlign="left" verticalAlign="top" right="10">
+		<mx:Image x="10" y="175" width="25" height="25" click="imageClicked(event,'pictures/tiles/3.jpg')" id="pic0">
+			<mx:source>@Embed(source='/pictures/tiles/3.jpg')</mx:source>
+		</mx:Image>
+		<mx:Image x="10" y="10" width="25" height="25" click="imageClicked(event,'pictures/tiles/5.jpg')" id="pic1">
+			<mx:source>@Embed(source='/pictures/tiles/5.jpg')</mx:source>
+		</mx:Image>
+		<mx:Image x="10" y="43" width="25" height="25" click="imageClicked(event,'pictures/tiles/6.jpg')" id="pic2">
+			<mx:source>@Embed(source='/pictures/tiles/6.jpg')</mx:source>
+		</mx:Image>
+		<mx:Image x="10" y="76" width="25" height="25" click="imageClicked(event,'pictures/tiles/7.jpg')" id="pic3">
+			<mx:source>@Embed(source='/pictures/tiles/7.jpg')</mx:source>
+		</mx:Image>
+		<mx:Image x="10" y="109" width="25" height="25" click="imageClicked(event,'pictures/tiles/8.jpg')" id="pic4">
+			<mx:source>@Embed(source='/pictures/tiles/8.jpg')</mx:source>
+		</mx:Image>
+		<mx:Image x="10" y="142" width="25" height="25" click="imageClicked(event,'pictures/tiles/9.jpg')" id="pic5">
+			<mx:source>@Embed(source='/pictures/tiles/9.jpg')</mx:source>
+		</mx:Image>
+	</mx:Panel>
+	<mx:Panel y="273" width="124" height="86" layout="absolute" title="Racks" horizontalAlign="left" verticalAlign="top" right="10">
+		<mx:Image x="10" y="10" width="25" height="25" click="newDynamicRack1(event)" id="pic10" toolTip="New Rack">
+			<mx:source>@Embed(source='/pictures/dynamicRack1.JPG')</mx:source>
+		</mx:Image>
+		<mx:Image x="40" y="10" width="25" height="25" click="newRoundRack1(event)" id="pic11" toolTip="New RoundRack">
+			<mx:source>@Embed(source='/pictures/roundRack1.JPG')</mx:source>
+		</mx:Image>
+		<mx:Image x="70" y="10" width="25" height="25" click="newRolleRack1(event)" id="pic12" toolTip="New RolleRack">
+			<mx:source>@Embed(source='/pictures/RolleRack1.JPG')</mx:source>
+		</mx:Image>
+	</mx:Panel>
+	<mx:Panel y="401" width="124" height="68" layout="absolute" title="View" right="10">
+		<mx:Image width="25" height="25" click="Camera3D()" id="pic7" toolTip="New Rack" top="1" x="3">
+			<mx:source>@Embed(source='/pictures/3DView.jpg')</mx:source>
+		</mx:Image>
+		<mx:Image width="25" height="25" click="PlanCamera()" id="pic8" toolTip="New Rack" x="36" y="2">
+			<mx:source>@Embed(source='/pictures/PlanView.jpg')</mx:source>
+		</mx:Image>
+		<mx:Image width="25" height="25" click="newDynamicRack1(event)" id="pic9" toolTip="New Rack" top="2" x="68">
+			<mx:source>@Embed(source='/pictures/dynamicRack1.JPG')</mx:source>
+		</mx:Image>
+	</mx:Panel>
+	<services:ComplexRIADTO id="complexRIADTO" fault="Alert.show(event.fault.faultString + '\n' + event.fault.faultDetail)" showBusyCursor="true"/>
+	<mx:CallResponder id="sendToClientResult" result="notifyUserOnDataArrivalsendToClientResult(event);"/>
+	<mx:CallResponder id="sendToServerResult" result="notifyUserOnDataArrivalsendToServerResult(event);"/>
+	
+	<!--
+	<mx:CallResponder id="addRoundRack1javaResult" result="addRoundRack1javaResults(event)"/>
+	<services:RoundRack1javaDTO id="roundRack1javaDTO" fault="Alert.show(event.fault.faultString + '\nXXX' + event.fault.faultDetail)" showBusyCursor="true"/>
+	<services:RoundRack1javaDTO id="roundRack1javaDTO" fault="Alert.show(event.fault.faultString + '\nroundRack1javaDTO' + event.fault.faultDetail)" showBusyCursor="true"/>
+	<services:ComplexRIADTO id="complexRIADTO" fault="Alert.show(event.fault.faultString + '\ncomplexRIADTO' + event.fault.faultDetail)" showBusyCursor="true"/>
+	<mx:CallResponder id="addComplexRIAResult" result="Alert.show(event.fault.faultString + '\ncomplexRIADTO' + event.fault.faultDetail)"/>-->
+</mx:Application>

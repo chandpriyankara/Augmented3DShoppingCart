@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="remoting-service" class="flex.messaging.services.RemotingService">
+	<adapters>
+		<adapter-definition id="java-object"
+			class="flex.messaging.services.remoting.adapters.JavaAdapter"
+			default="true" />
+		<adapter-definition id="actionscript"
+			class="flex.messaging.services.messaging.adapters.ActionScriptAdapter" />
+		<adapter-definition id="jms"
+			class="flex.messaging.services.messaging.adapters.JMSAdapter" />
+	</adapters>
+
+	<destination id="ComplexRIADTO">
+		<properties>
+			<source>com.fortunaglobal.model.dto.ComplexRIADTO
+			</source>
+		</properties>
+		<adapter ref="java-object" />
+	</destination>
+
+	<default-channels>
+		<channel ref="my-amf" />
+	</default-channels>
+</service>
+
+
+
+

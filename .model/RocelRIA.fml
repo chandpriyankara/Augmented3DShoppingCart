@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model xmlns="http://ns.adobe.com/Fiber/1.0">
+  <annotation name="ActionScriptGeneration">
+    <item name="FullyQualifyReferences">true</item>
+  </annotation>
+  <service name="ComplexRIADTO">
+    <annotation name="ActionScriptGeneration">
+      <item name="ServiceType">RemoteObject</item>
+      <item name="Package">services</item>
+      <item name="Destination">ComplexRIADTO</item>
+    </annotation>
+    <annotation name="ServiceConfig">
+      <item name="DEFAULT_ENTITY_PACKAGE">valueObjects</item>
+      <item name="contextRoot">/RocelRIA</item>
+      <item name="rootUrl">http://localhost:8081/RocelRIA</item>
+      <item name="LINKED_FILE"></item>
+      <item name="ABSOLUTE_ENDPOINT">http://localhost:8081/RocelRIA/messagebroker/amf</item>
+    </annotation>
+    <annotation name="ServiceTypeGroup">
+      <item name="ServiceBackendType">BlazeDS</item>
+    </annotation>
+    <function name="sendToServer" arguments="arg0:ComplexRIA" return-type="ComplexRIA">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">ComplexRIA</item>
+        <item name="returnType">ComplexRIA</item>
+      </annotation>
+    </function>
+    <function name="sendToClient" arguments="arg0:integer" return-type="ComplexRIA">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">integer</item>
+        <item name="returnType">ComplexRIA</item>
+      </annotation>
+    </function>
+  </service>
+  <entity name="DynamicRack1java">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">DynamicRack1java</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">com.fortunaglobal.model.DynamicRack1java</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">ComplexRIADTO</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="scale" type="integer"/>
+    <property name="materialId" type="integer"/>
+    <property name="status" type="integer"/>
+    <property name="object3DType" type="integer"/>
+    <property name="dynamicRack1java" type="string"/>
+    <property name="showroom" type="integer"/>
+    <property name="name" type="string"/>
+    <property name="rotationZ" type="integer"/>
+    <property name="object3DId" type="integer"/>
+    <property name="z" type="integer"/>
+    <property name="rotationX" type="integer"/>
+    <property name="y" type="integer"/>
+    <property name="x" type="integer"/>
+    <property name="rotationY" type="integer"/>
+  </entity>
+  <entity name="RolleRack1java">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">RolleRack1java</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">com.fortunaglobal.model.RolleRack1java</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">ComplexRIADTO</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="scale" type="integer"/>
+    <property name="materialId" type="integer"/>
+    <property name="status" type="integer"/>
+    <property name="rolleRack1javaMaterial" type="RolleRack1javaMaterial"/>
+    <property name="object3DType" type="integer"/>
+    <property name="showroom" type="integer"/>
+    <property name="name" type="string"/>
+    <property name="rotationZ" type="integer"/>
+    <property name="object3DId" type="integer"/>
+    <property name="rolleRack1java" type="string"/>
+    <property name="z" type="integer"/>
+    <property name="rotationX" type="integer"/>
+    <property name="y" type="integer"/>
+    <property name="x" type="integer"/>
+    <property name="rotationY" type="integer"/>
+  </entity>
+  <entity name="ComplexRIA">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">ComplexRIA</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">com.fortunaglobal.model.ComplexRIA</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">ComplexRIADTO</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="listDeletedRoundRack1java" type="RoundRack1java[]"/>
+    <property name="listNewRoundRack1java" type="RoundRack1java[]"/>
+    <property name="listNewRolleRack1java" type="RolleRack1java[]"/>
+    <property name="listNewDynamicRack1java" type="DynamicRack1java[]"/>
+    <property name="listExistingRolleRack1java" type="RolleRack1java[]"/>
+    <property name="listExistingRoundRack1java" type="RoundRack1java[]"/>
+    <property name="listDeletedRolleRack1java" type="RolleRack1java[]"/>
+    <property name="showRoomId" type="integer"/>
+    <property name="listExistingDynamicRack1java" type="DynamicRack1java[]"/>
+    <property name="uSerMessage" type="string"/>
+    <property name="listDeletedDynamicRack1java" type="DynamicRack1java[]"/>
+  </entity>
+  <entity name="RoundRack1javaMaterial">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">RoundRack1javaMaterial</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">com.fortunaglobal.model.RoundRack1javaMaterial</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">ComplexRIADTO</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="roundTray110plateMaterialUrl" type="string"/>
+    <property name="roundTray17plateMaterialUrl" type="string"/>
+    <property name="roundTray12plateMaterialUrl" type="string"/>
+    <property name="roundTray117plateMaterialUrl" type="string"/>
+    <property name="roundTray13plateMaterialUrl" type="string"/>
+    <property name="roundTray16plateMaterialUrl" type="string"/>
+    <property name="roundTray121plateMaterialUrl" type="string"/>
+    <property name="roundTray119plateMaterialUrl" type="string"/>
+    <property name="roundTray115plateMaterialUrl" type="string"/>
+    <property name="roundTray118plateMaterialUrl" type="string"/>
+    <property name="roundTray120plateMaterialUrl" type="string"/>
+    <property name="roundTray114plateMaterialUrl" type="string"/>
+    <property name="roundTray18plateMaterialUrl" type="string"/>
+    <property name="cylinderBitmapFileMaterialUrl" type="string"/>
+    <property name="roundTray113plateMaterialUrl" type="string"/>
+    <property name="status" type="integer"/>
+    <property name="roundTray111plateMaterialUrl" type="string"/>
+    <property name="roundTray11plateMaterialUrl" type="string"/>
+    <property name="cubesMaterialListUrl" type="string"/>
+    <property name="roundRack1javaMaterialId" type="integer"/>
+    <property name="roundTray15plateMaterialUrl" type="string"/>
+    <property name="roundTray19plateMaterialUrl" type="string"/>
+    <property name="trayplateMaterialUrl" type="string"/>
+    <property name="roundTray112plateMaterialUrl" type="string"/>
+    <property name="roundRack1javaMaterialname" type="string"/>
+    <property name="roundTray116plateMaterialUrl" type="string"/>
+    <property name="roundTray14plateMaterialUrl" type="string"/>
+  </entity>
+  <entity name="RolleRack1javaMaterial">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">RolleRack1javaMaterial</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">com.fortunaglobal.model.RolleRack1javaMaterial</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">ComplexRIADTO</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="rolleTray4x43plateMaterialList4Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList6Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList1Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList2Url" type="string"/>
+    <property name="rolleTray4x45plateMaterialList12Url" type="string"/>
+    <property name="rolleTray4x43plateMaterialList13Url" type="string"/>
+    <property name="rolleTray4x48plateMaterialList12Url" type="string"/>
+    <property name="rolleTray4x410plateMaterialList9Url" type="string"/>
+    <property name="rolleTray4x410plateMaterialList16Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList12Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList2Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList12Url" type="string"/>
+    <property name="rolleTray4x45plateMaterialList4Url" type="string"/>
+    <property name="rolleTray4x49plateMaterialList3Url" type="string"/>
+    <property name="rolleTray4x45plateMaterialList9Url" type="string"/>
+    <property name="rolleTray4x45plateMaterialList7Url" type="string"/>
+    <property name="rolleTray4x48plateMaterialList7Url" type="string"/>
+    <property name="rolleTray4x48plateMaterialList14Url" type="string"/>
+    <property name="rolleTray4x411plateMaterialList16Url" type="string"/>
+    <property name="rolleTray4x45plateMaterialList5Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList8Url" type="string"/>
+    <property name="rolleTray4x410plateMaterialList14Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList11Url" type="string"/>
+    <property name="rolleTray4x410plateMaterialList5Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList10Url" type="string"/>
+    <property name="panelcubesMaterialListUrl" type="string"/>
+    <property name="rolleTray4x410plateMaterialList3Url" type="string"/>
+    <property name="rolleTray4x411plateMaterialList1Url" type="string"/>
+    <property name="rolleTray4x49plateMaterialList11Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList9Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList15Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList6Url" type="string"/>
+    <property name="rolleTray4x43plateMaterialList9Url" type="string"/>
+    <property name="rolleTray4x410plateMaterialList12Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList13Url" type="string"/>
+    <property name="rolleTray4x410plateMaterialList7Url" type="string"/>
+    <property name="rolleTray4x45plateMaterialList16Url" type="string"/>
+    <property name="rolleTray4x410plateMaterialList8Url" type="string"/>
+    <property name="rolleTray4x48plateMaterialList10Url" type="string"/>
+    <property name="rolleTray4x411plateMaterialList10Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList13Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList3Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList7Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList14Url" type="string"/>
+    <property name="rolleTray4x43plateMaterialList5Url" type="string"/>
+    <property name="rolleTray4x45plateMaterialList14Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList2Url" type="string"/>
+    <property name="rolleTray4x410plateMaterialList1Url" type="string"/>
+    <property name="rolleTray4x45plateMaterialList6Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList14Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList10Url" type="string"/>
+    <property name="rolleTray4x411plateMaterialList14Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList5Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList11Url" type="string"/>
+    <property name="rolleTray4x43plateMaterialList8Url" type="string"/>
+    <property name="rolleTray4x410plateMaterialList2Url" type="string"/>
+    <property name="rolleTray4x43plateMaterialList12Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList8Url" type="string"/>
+    <property name="rolleTray4x43plateMaterialList16Url" type="string"/>
+    <property name="rolleTray4x411plateMaterialList4Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList6Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList12Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList11Url" type="string"/>
+    <property name="rolleTray4x48plateMaterialList15Url" type="string"/>
+    <property name="rolleTray4x48plateMaterialList4Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList9Url" type="string"/>
+    <property name="rolleRack1javaMaterialId" type="integer"/>
+    <property name="hangerBar1BitmapFileMaterialUrl" type="string"/>
+    <property name="rolleTray4x49plateMaterialList2Url" type="string"/>
+    <property name="rolleTray4x410plateMaterialList4Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList16Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList4Url" type="string"/>
+    <property name="rolleTray4x48plateMaterialList16Url" type="string"/>
+    <property name="rolleTray4x410plateMaterialList6Url" type="string"/>
+    <property name="rolleTray4x49plateMaterialList9Url" type="string"/>
+    <property name="rolleTray4x45plateMaterialList3Url" type="string"/>
+    <property name="rolleTray4x45plateMaterialList8Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList10Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList9Url" type="string"/>
+    <property name="rolleTray4x45plateMaterialList15Url" type="string"/>
+    <property name="rolleTray4x49plateMaterialList16Url" type="string"/>
+    <property name="hangerBar2BitmapFileMaterialUrl" type="string"/>
+    <property name="rolleTray4x45plateMaterialList11Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList5Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList1Url" type="string"/>
+    <property name="rolleTray4x43plateMaterialList6Url" type="string"/>
+    <property name="rolleTray4x48plateMaterialList1Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList8Url" type="string"/>
+    <property name="rolleTray4x49plateMaterialList6Url" type="string"/>
+    <property name="rolleTray4x43plateMaterialList11Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList9Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList9Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList7Url" type="string"/>
+    <property name="rolleTray4x49plateMaterialList14Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList13Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList10Url" type="string"/>
+    <property name="rolleTray4x410plateMaterialList13Url" type="string"/>
+    <property name="rolleTray4x49plateMaterialList12Url" type="string"/>
+    <property name="rolleTray4x410plateMaterialList11Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList3Url" type="string"/>
+    <property name="status" type="integer"/>
+    <property name="footcubesMaterialListUrl" type="string"/>
+    <property name="rolleTray4x411plateMaterialList7Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList5Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList14Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList1Url" type="string"/>
+    <property name="rolleTray4x411plateMaterialList8Url" type="string"/>
+    <property name="rolleTray4x48plateMaterialList11Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList15Url" type="string"/>
+    <property name="rolleTray4x43plateMaterialList14Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList15Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList14Url" type="string"/>
+    <property name="rolleTray4x49plateMaterialList5Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList12Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList16Url" type="string"/>
+    <property name="rolleTray4x411plateMaterialList3Url" type="string"/>
+    <property name="rolleTray4x410plateMaterialList10Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList1Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList15Url" type="string"/>
+    <property name="rolleTray4x411plateMaterialList12Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList6Url" type="string"/>
+    <property name="rolleTray4x49plateMaterialList10Url" type="string"/>
+    <property name="rolleTray4x48plateMaterialList6Url" type="string"/>
+    <property name="rolleTray4x411plateMaterialList5Url" type="string"/>
+    <property name="rolleRack1javaMaterialname" type="string"/>
+    <property name="rolleTray4x48plateMaterialList13Url" type="string"/>
+    <property name="rolleTray4x49plateMaterialList1Url" type="string"/>
+    <property name="rolleTray4x411plateMaterialList6Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList7Url" type="string"/>
+    <property name="rolleTray4x410plateMaterialList15Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList6Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList16Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList8Url" type="string"/>
+    <property name="rolleTray4x45plateMaterialList1Url" type="string"/>
+    <property name="rolleTray4x48plateMaterialList8Url" type="string"/>
+    <property name="rolleTray4x411plateMaterialList13Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList2Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList4Url" type="string"/>
+    <property name="rolleTray4x411plateMaterialList9Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList5Url" type="string"/>
+    <property name="rolleTray4x411plateMaterialList2Url" type="string"/>
+    <property name="rolleTray4x43plateMaterialList7Url" type="string"/>
+    <property name="rolleTray4x411plateMaterialList15Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList3Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList15Url" type="string"/>
+    <property name="rolleTray4x49plateMaterialList13Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList3Url" type="string"/>
+    <property name="rolleTray4x49plateMaterialList4Url" type="string"/>
+    <property name="rolleTray4x45plateMaterialList10Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList3Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList4Url" type="string"/>
+    <property name="rolleTray4x48plateMaterialList3Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList4Url" type="string"/>
+    <property name="rolleTray4x45plateMaterialList2Url" type="string"/>
+    <property name="rolleTray4x48plateMaterialList9Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList13Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList5Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList10Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList2Url" type="string"/>
+    <property name="rolleTray4x43plateMaterialList10Url" type="string"/>
+    <property name="rolleTray4x49plateMaterialList8Url" type="string"/>
+    <property name="rolleTray4x45plateMaterialList13Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList16Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList16Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList4Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList11Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList14Url" type="string"/>
+    <property name="rolleTray4x48plateMaterialList2Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList1Url" type="string"/>
+    <property name="rolleTray4x43plateMaterialList2Url" type="string"/>
+    <property name="rolleTray4x48plateMaterialList5Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList12Url" type="string"/>
+    <property name="rolleTray4x42plateMaterialList7Url" type="string"/>
+    <property name="rolleTray4x411plateMaterialList11Url" type="string"/>
+    <property name="rolleTray4x49plateMaterialList15Url" type="string"/>
+    <property name="rolleTray4x43plateMaterialList3Url" type="string"/>
+    <property name="rolleTray4x49plateMaterialList7Url" type="string"/>
+    <property name="rolleTray4x41plateMaterialList7Url" type="string"/>
+    <property name="rolleTray4x43plateMaterialList15Url" type="string"/>
+    <property name="rolleTray4x43plateMaterialList1Url" type="string"/>
+    <property name="rolleTray4x47plateMaterialList11Url" type="string"/>
+    <property name="rolleTray4x46plateMaterialList13Url" type="string"/>
+    <property name="rolleTray4x44plateMaterialList8Url" type="string"/>
+  </entity>
+  <entity name="RoundRack1java">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">RoundRack1java</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">com.fortunaglobal.model.RoundRack1java</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">ComplexRIADTO</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="scale" type="integer"/>
+    <property name="roundRack1java" type="string"/>
+    <property name="status" type="integer"/>
+    <property name="materialId" type="integer"/>
+    <property name="object3DType" type="integer"/>
+    <property name="showroom" type="integer"/>
+    <property name="name" type="string"/>
+    <property name="rotationZ" type="integer"/>
+    <property name="object3DId" type="integer"/>
+    <property name="roundRack1javaMaterial" type="RoundRack1javaMaterial"/>
+    <property name="z" type="integer"/>
+    <property name="rotationX" type="integer"/>
+    <property name="y" type="integer"/>
+    <property name="x" type="integer"/>
+    <property name="rotationY" type="integer"/>
+  </entity>
+</model>

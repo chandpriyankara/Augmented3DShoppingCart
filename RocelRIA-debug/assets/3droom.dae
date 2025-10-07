@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+    <asset>
+        <contributor>
+            <authoring_tool>Whoola COLLADA Converter</authoring_tool>
+        </contributor>
+        <created>2010-08-30T04:09:51.375Z</created>
+        <modified>2010-08-30T04:09:51.375Z</modified>
+    </asset>
+    <library_visual_scenes>
+        <visual_scene id="scene-0">
+            <node id="node-0">
+                <node id="node-1">
+                    <translate>-900.0 1500.0 1000.0</translate>
+                    <instance_light url="#light-0"/>
+                </node>
+                <node id="node-2">
+                    <translate>900.0 -1500.0 -1000.0</translate>
+                    <instance_light url="#light-1"/>
+                </node>
+            </node>
+        </visual_scene>
+    </library_visual_scenes>
+    <library_lights>
+        <light id="light-0">
+            <technique_common>
+                <point>
+                    <color>1.0 1.0 1.0</color>
+                </point>
+            </technique_common>
+        </light>
+        <light id="light-1">
+            <technique_common>
+                <point>
+                    <color>1.0 1.0 1.0</color>
+                </point>
+            </technique_common>
+        </light>
+    </library_lights>
+    <scene>
+        <instance_visual_scene url="#scene-0"/>
+    </scene>
+</COLLADA>

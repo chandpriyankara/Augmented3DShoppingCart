@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexProperties enableServiceManager="false" flexServerFeatures="4" flexServerType="2" fmlDataModelLocation=".model/RocelRIA.fml" serverContextRoot="/RocelRIA" serverRoot="C:/Program Files/Apache Software Foundation/Tomcat 5.5/webapps/RocelRIA/" serverRootURL="http://localhost:8081/RocelRIA" toolCompile="true" useServerFlexSDK="false" version="1"/>
